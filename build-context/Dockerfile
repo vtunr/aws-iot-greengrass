@@ -13,8 +13,8 @@ COPY resources /
 # COPY <yourCertificate.cer> /usr/local/share/ca-certificates/<yourCertificate.cer>
 
 # Install Greengrass Core Dependencies
-RUN apk update && \
-    apk add tar gzip wget xz shadow libc6-compat ca-certificates iproute2 python3 && \
+RUN apt update && \
+    apt install tar gzip wget xz shadow libc6-compat ca-certificates iproute2 python3 && \
     wget $GREENGRASS_RELEASE_URL
 
 # RUN apk add openjdk8-jre && \
@@ -24,7 +24,7 @@ RUN apk update && \
 #     cp node-v6.10.2-linux-x64/bin/node /usr/bin/node && \
 #     ln -s /usr/bin/node /usr/bin/nodejs6.10
     
-RUN apk del wget
+# RUN apk del wget
 
 # Copy Greengrass Licenses AWS IoT Greengrass Docker Image
 COPY greengrass-license-v1.pdf /
