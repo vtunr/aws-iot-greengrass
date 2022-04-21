@@ -24,8 +24,8 @@ jobs:
         with:   
           push: true
           platforms: linux/amd64,linux/arm64,linux/arm/v7
+          context: build-context
           file: Dockerfile
-          build-contexts: build-context
           build-args : greengrass_version=1.11.6
           tags: | 
             aws-iot-greengrass:1.11.6
