@@ -1,4 +1,4 @@
-FROM arm32v7/alpine as base
+FROM ubuntu:latest as base
 LABEL maintainer = Wago <dirk.meihoefer@wago.com>
 LABEL maintainer = Wago <sergei.ikkert@wago.com>
 
