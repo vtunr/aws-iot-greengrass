@@ -13,8 +13,8 @@ COPY resources /
 # COPY <yourCertificate.cer> /usr/local/share/ca-certificates/<yourCertificate.cer>
 
 # Install Greengrass Core Dependencies
-RUN apt update && \
-    apt install tar gzip wget xz shadow libc6-compat ca-certificates iproute2 python3 && \
+RUN apt -y update && \
+    apt -y install tar gzip wget xz shadow libc6-compat ca-certificates iproute2 python3 && \
     wget $GREENGRASS_RELEASE_URL
 
 # RUN apk add openjdk8-jre && \
