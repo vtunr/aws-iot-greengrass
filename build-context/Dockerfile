@@ -15,7 +15,7 @@ COPY resources /
 # Install Greengrass Core Dependencies
 RUN apt -y update && \
     apt -y install tar gzip wget ca-certificates iproute2 python3 && \
-    wget $GREENGRASS_RELEASE_URL
+    wget $GREENGRASS_RELEASE_URL --no-check-certificate
 
 # RUN apk add openjdk8-jre && \
 #     ln -s /usr/bin/java /usr/local/bin/java8
